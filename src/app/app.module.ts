@@ -3,14 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroesComponent
   ],
-  imports: [
+  imports: [//below are the modules why application need
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule //For using [(ngModel)]="hero.name"
   ],
   providers: [],
   bootstrap: [AppComponent]
